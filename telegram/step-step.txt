@@ -1,0 +1,26 @@
+A.  Create Bot Telegram
+    Step 1. Find telegram bot named "@botfarther", he will help you with creating and managing your bot.
+    Step 2. Print “/help” and you will see all possible commands that the botfather can operate.
+    Step 3. To create a new bot type “/newbot” or click on it.
+    Step 4. To create a name and username bot (sample : Username is "Kandarief007" and username "kandariefbot").
+    Step 5. Congratulations! You've just created your Telegram bot. You will see a new API token generated for it.
+            In sample above it's 270485614:AAHfiqksKZ8WmR2zSjiQ7_v4TMAKdiHm9T0
+
+B.  Add Bot to Your Group
+    Step 1. Add username bot in your group (sample : kandariefbot)
+    Step 2. Check in curl curl 'https://api.telegram.org/bot<YourBOTToken>/getUpdates'
+            in result , you will see chat id with name Group
+
+C.  Create Script 
+    Step 1. Create file  telegram-send.sh (in other file, change Chat ID and Token ID)
+    Step 2. chmod +x telegram-send.sh
+    Step 3. Test Send Message  
+            ./telegram-send.sh "Test message"
+    Step 4. sudo mv telegram-send.sh /usr/bin/telegram-send
+    Step 5. sudo chown root:root /usr/bin/telegram-send
+    Step 6. Test Send Message 
+            telegram-send "Test message"
+
+D.  Send notification on SSH login
+    Step 1. touch login-notify.sh  (in this file you can call script telegram-send )
+    Step 2. sudo mv login-notify.sh /etc/profile.d/login-notify.sh
